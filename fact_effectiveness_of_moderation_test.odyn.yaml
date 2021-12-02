@@ -1,0 +1,18 @@
+type: presto
+enabled: true
+description: Moderation effectiveness
+flow: fact_effectiveness_of_moderation_test
+presto:
+  sqlfile: fact_effectiveness_of_moderation_test.sql
+  schema: odyn_css
+  catalog: hive
+  max_concurrency: 1
+  single_task: True
+options:
+  depends_on_past: False
+retries: 3
+retry_period: 1m
+retry_exponential: True
+schedule:
+  start_time: '2021-04-01'
+  cron: '06 19 * * *'
