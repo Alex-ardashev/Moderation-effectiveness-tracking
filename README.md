@@ -2,4 +2,4 @@
 
 The impact of the moderation mistakes
 
-![Snapshot]()
+![Snapshot](page1.png)
